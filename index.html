@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MiMaMik Pekanbaru</title>
+<meta name="description" content="MiMaMik Pekanbaru, warung mie berlevel di Jl. Paus Pekanbaru. Level pedas 0-4, harga mulai Rp7.000, tempat nyaman untuk sendiri maupun ramean.">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ NAVBAR ============ -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <a class="navbar-brand font-weight-bold" href="#" data-page="beranda">🍜 MiMaMik Pekanbaru</a>
+    <button class="navbar-toggler" type="button" id="navbarToggleBtn" aria-controls="navbarLinks" aria-expanded="false" aria-label="Buka menu navigasi">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarLinks">
+        <ul class="navbar-nav ml-auto align-items-lg-center">
+            <li class="nav-item"><a class="nav-link nav-link-page active text-white" href="#" data-page="beranda">Beranda</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-page text-white-50" href="#" data-page="tentang">Tentang</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-page text-white-50" href="#" data-page="menu">Menu</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-page text-white-50" href="#" data-page="testimoni">Testimoni</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-page text-white-50" href="#" data-page="lokasi">Lokasi</a></li>
+            <li class="nav-item ml-lg-2"><a class="nav-link btn-kontak-nav px-3" href="#" data-page="kontak">Kontak <i class="fas fa-arrow-right ml-1"></i></a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- ============ BERANDA ============ -->
+<div id="page-beranda" class="page-view active">
+    <section class="hero-section text-white text-center">
+        <div class="container">
+            <span class="badge badge-eyebrow mb-3 px-3 py-2">🌶️ Mie Berlevel • Ramah Dikantong</span>
+            <h1 class="hero-title font-weight-bold mb-3">Selamat Datang di<br>MiMaMik Pekanbaru</h1>
+            <p class="hero-sub mb-4 mx-auto">
+                Mi Mamik, rajanya mie, bikin lidahmu tersenyum. Level pedas 0–4 bisa
+                disesuaikan seleramu, harga mulai Rp7.000, tempatnya luas dan nyaman
+                buat makan sendiri maupun ramean di Jalan Paus, Pekanbaru.
+            </p>
+            <button class="btn btn-chili px-4 mr-2" data-page="menu">📑 Lihat Menu Lengkap</button>
+            <button class="btn btn-outline-cream px-4" data-page="kontak">📞 Hubungi Kami</button>
+        </div>
+    </section>
+
+    <!-- Info strip -->
+    <div class="container info-strip">
+        <div class="row">
+            <div class="col-6 col-md-3 mb-3 mb-md-0">
+                <div class="info-card text-center">
+                    <i class="fas fa-clock d-block mb-2"></i>
+                    <div class="font-weight-bold">09.00–21.30 WIB</div>
+                    <small class="text-muted">Buka setiap hari</small>
+                </div>
+            </div>
+            <div class="col-6 col-md-3 mb-3 mb-md-0">
+                <div class="info-card text-center">
+                    <i class="fas fa-location-dot d-block mb-2"></i>
+                    <div class="font-weight-bold">Jl. Paus No. 69</div>
+                    <small class="text-muted">Marpoyan Damai, Pekanbaru</small>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="info-card text-center">
+                    <i class="fas fa-fire d-block mb-2"></i>
+                    <div class="font-weight-bold">Level 0–4</div>
+                    <small class="text-muted">Pedas sesuai selera</small>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="info-card text-center">
+                    <i class="fas fa-wallet d-block mb-2"></i>
+                    <div class="font-weight-bold">Mulai Rp7.000</div>
+                    <small class="text-muted">Cash &amp; QRIS</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sedang Hits -->
+    <section class="py-5">
+        <div class="container">
+            <span class="section-eyebrow">Sedang Hits</span>
+            <h2 class="section-title font-weight-bold mb-4">Info &amp; Promo MiMaMik</h2>
+            <div id="carouselPromo" class="carousel" data-ride="carousel" data-interval="5000">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselPromo" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselPromo" data-slide-to="1"></li>
+                    <li data-target="#carouselPromo" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="slide-placeholder" style="background: linear-gradient(120deg, #6b1220, #e14434);">
+                            <span class="badge badge-light mb-2 text-wine">Best Seller</span>
+                            <h4 class="font-weight-bold">Mie Mamik Level 3</h4>
+                            <p class="mb-0 text-white-50">Favorit pecinta pedas — cabai setan mulai unjuk gigi, chewy dan gurih.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="slide-placeholder" style="background: linear-gradient(120deg, #b9791f, #f2a93b);">
+                            <span class="badge badge-light mb-2">Hemat</span>
+                            <h4 class="font-weight-bold">Paket Ramean Serba Terjangkau</h4>
+                            <p class="mb-0 text-white-50">Mie + minuman mulai Rp19.000, pas buat nongkrong bareng teman.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="slide-placeholder" style="background: linear-gradient(120deg, #4a0c17, #6b1220);">
+                            <span class="badge badge-light mb-2">Fasilitas</span>
+                            <h4 class="font-weight-bold">Full Kipas, Free WiFi &amp; Musholla</h4>
+                            <p class="mb-0 text-white-50">Tempat luas dan nyaman, cocok untuk makan sendiri maupun ramean.</p>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselPromo" data-slide="prev"><span class="carousel-control-prev-icon"><i class="fas fa-chevron-left"></i></span></a>
+                <a class="carousel-control-next" href="#carouselPromo" data-slide="next"><span class="carousel-control-next-icon"><i class="fas fa-chevron-right"></i></span></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coba Sensasinya -->
+    <section class="py-4">
+        <div class="container">
+            <div class="level-widget">
+                <span class="section-eyebrow" style="color:var(--amber);">Coba Sensasinya</span>
+                <h2 class="font-weight-bold mb-3" style="color:#fff;">Pilih Level Pedasmu</h2>
+                <div class="level-picker mb-3" id="levelPicker">
+                    <button class="level-btn active" data-level="0">Level 0</button>
+                    <button class="level-btn" data-level="1">Level 1</button>
+                    <button class="level-btn" data-level="2">Level 2</button>
+                    <button class="level-btn" data-level="3">Level 3</button>
+                    <button class="level-btn" data-level="4">Level 4</button>
+                </div>
+                <div class="flame-row" id="flameRow">
+                    <span class="flame">🌶️</span><span class="flame">🌶️</span><span class="flame">🌶️</span><span class="flame">🌶️</span>
+                </div>
+                <p class="level-desc mb-0" id="levelDesc">Rasa gurih manis, nyaris tanpa pedas. Cocok buat yang baru coba MiMaMik.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kenapa MiMaMik? -->
+    <section class="py-5">
+        <div class="container">
+            <span class="section-eyebrow">Kenapa MiMaMik?</span>
+            <h2 class="section-title font-weight-bold mb-4">Alasan Warga Pekanbaru Balik Lagi</h2>
+            <div class="row">
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-tags"></i></div>
+                        <h4 class="h6 font-weight-bold">Harga Ramah Dikantong</h4>
+                        <p class="small text-muted mb-0">Menu mulai Rp7.000, cocok untuk mahasiswa dan pekerja kantoran.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-fire-flame-curved"></i></div>
+                        <h4 class="h6 font-weight-bold">Level Pedas Konsisten</h4>
+                        <p class="small text-muted mb-0">Dari level 0 yang aman sampai level 4 yang bikin lidah bergetar.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-couch"></i></div>
+                        <h4 class="h6 font-weight-bold">Tempat Luas &amp; Nyaman</h4>
+                        <p class="small text-muted mb-0">Full kipas, free WiFi, musholla — nyaman sendiri maupun ramean.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-qrcode"></i></div>
+                        <h4 class="h6 font-weight-bold">Bayar Gampang</h4>
+                        <p class="small text-muted mb-0">Bisa cash atau QRIS, gak perlu ribet siapin uang pas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- ============ TENTANG ============ -->
+<div id="page-tentang" class="page-view">
+    <div class="page-header">
+        <div class="container">
+            <span class="badge badge-eyebrow mb-2">Tentang Kami</span>
+            <h1 class="h3 font-weight-bold mb-1">Cerita MiMaMik Pekanbaru</h1>
+            <p class="mb-0" style="color: rgba(255,255,255,.75);">Raja-nya mie yang bikin lidahmu tersenyum.</p>
+        </div>
+    </div>
+    <section class="py-5">
+        <div class="container">
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <span class="section-eyebrow">Sejarah Singkat</span>
+                    <h2 class="section-title font-weight-bold mb-3">Sehidup, Semamik 🙂</h2>
+                    <p>
+                        MiMaMik hadir di Jalan Paus, Marpoyan Damai, Pekanbaru sebagai jawaban
+                        untuk pecinta mie pedas yang ingin makan enak tanpa bikin kantong bolong.
+                        Mengusung slogan <em>"Sehidup, Semamik"</em>, MiMaMik menyajikan mie
+                        keriting chewy dengan bumbu cabai setan dan lada hitam khas, dilengkapi
+                        pilihan level pedas dari 0 sampai 4 sesuai selera pelanggan.
+                    </p>
+                    <p class="mb-0">
+                        Selain mie, MiMaMik juga menyediakan nasi goreng, aneka snack seperti
+                        pangsit dan tahu bakso, hingga minuman segar seperti es kopi susu aren
+                        dan milkshake — semuanya dengan harga di bawah Rp20.000.
+                    </p>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-6 mb-4">
+                            <div class="feature-card text-center">
+                                <div class="feature-icon mx-auto"><i class="fas fa-bullseye"></i></div>
+                                <h4 class="h6 font-weight-bold">Visi</h4>
+                                <p class="small text-muted mb-0">Jadi tempat makan mie berlevel favorit warga Pekanbaru yang nyaman dan terjangkau.</p>
+                            </div>
+                        </div>
+                        <div class="col-6 mb-4">
+                            <div class="feature-card text-center">
+                                <div class="feature-icon mx-auto"><i class="fas fa-heart"></i></div>
+                                <h4 class="h6 font-weight-bold">Misi</h4>
+                                <p class="small text-muted mb-0">Menyajikan mie berkualitas, pelayanan ramah, dan suasana nyaman untuk semua kalangan.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <span class="section-eyebrow">Fasilitas</span>
+            <h2 class="section-title font-weight-bold mb-4">Apa Saja yang Tersedia?</h2>
+            <div class="lokasi-fasilitas">
+                <span><i class="fas fa-mosque"></i> Musholla</span>
+                <span><i class="fas fa-fan"></i> Full Kipas</span>
+                <span><i class="fas fa-wifi"></i> Free WiFi</span>
+                <span><i class="fas fa-smoking"></i> Smoking Area</span>
+                <span><i class="fas fa-baby"></i> Baby Chair</span>
+                <span><i class="fas fa-users"></i> Cocok Ramean</span>
+                <span><i class="fas fa-qrcode"></i> Cash &amp; QRIS</span>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- ============ MENU ============ -->
+<div id="page-menu" class="page-view">
+    <div class="page-header">
+        <div class="container">
+            <span class="badge badge-eyebrow mb-2">Menu Kami</span>
+            <h1 class="h3 font-weight-bold mb-1">Daftar Menu MiMaMik</h1>
+            <p class="mb-0" style="color: rgba(255,255,255,.75);">Semua menu di bawah Rp20.000. Klik "Detail" untuk info lebih lengkap.</p>
+        </div>
+    </div>
+    <section class="py-5">
+        <div class="container">
+            <div class="tab-pill-nav" id="menuTabs">
+                <button class="tab-pill active" data-target="mie">🍜 Mie &amp; Nasi</button>
+                <button class="tab-pill" data-target="snack">🥟 Snack</button>
+                <button class="tab-pill" data-target="minuman">🥤 Minuman &amp; Dessert</button>
+            </div>
+
+            <div class="menu-pane active" id="pane-mie">
+                <div class="row">
+                    <div class="col-md-4 col-6 mb-4">
+                        <div class="menu-card">
+                            <div class="menu-card-thumb">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyaZuKkAtq2NM7yDxKBHzCCV6hiG_9rdqqYVJs3yMpBA&s" alt="Mie Mamik">
+                            </div>
+                            <div class="menu-card-body">
+                                <h4 class="h6 font-weight-bold mb-1">Mie Mamik <span class="level-badge">Lv 0-4</span></h4>
+                                <p class="small text-muted mb-2">Mie keriting chewy, bumbu cabai setan &amp; lada hitam. Level pedas bisa dipilih sesuai selera.</p>
+                                <div class="mt-auto d-flex justify-content-between align-items-center">
+                                    <span class="menu-price">Rp12.000</span>
+                                    <button class="btn btn-sm btn-chili" data-menu-detail="mie-mamik">Detail</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-6 mb-4">
+                        <div class="menu-card">
+                            <div class="menu-card-thumb">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyaZuKkAtq2NM7yDxKBHzCCV6hiG_9rdqqYVJs3yMpBA&s" alt="Mie Bontot">
+                            </div>
+                            <div class="menu-card-body">
+                                <h4 class="h6 font-weight-bold mb-1">Mie Bontot</h4>
+                                <p class="small text-muted mb-2">Mie kenyal dengan taburan bontot khas, gurih dan mengenyangkan.</p>
+                                <div class="mt-auto d-flex justify-content-between align-items-center">
+                                    <span class="menu-price">Rp12.000</span>
+                                    <button class="btn btn-sm btn-chili" data-menu-detail="mie-bontot">Detail</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-6 mb-4">
+                        <div class="menu-card">
+                            <div class="menu-card-thumb">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyEbwOsHO15qWqzZFaUpWbxmSfZV9sPS0X8RubI43NqQ&s" alt="Nasi Goreng Mamik">
+                            </div>
+                            <div class="menu-card-body">
+                                <h4 class="h6 font-weight-bold mb-1">Nasi Goreng Mamik</h4>
+                                <p class="small text-muted mb-2">Nasi goreng bumbu senada dengan mie andalan. Tambah telur +Rp5.000.</p>
+                                <div class="mt-auto d-flex justify-content-between align-items-center">
+                                    <span class="menu-price">Rp16.000</span>
+                                    <button class="btn btn-sm btn-chili" data-menu-detail="nasi-goreng">Detail</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-pane" id="pane-snack">
+                <div class="row">
+                    <div class="col-md-3 col-6 mb-4">
+                        <div class="menu-card">
+                            <div class="menu-card-thumb">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCK3ok7RcLN6niBNeBUXpgUyu4rplNN2JneAMgTizauw&s=10" alt="Pangsit Ayam">
+                            </div>
+                            <div class="menu-card-body">
+                                <h4 class="h6 font-weight-bold mb-1">Pangsit Ayam</h4>
+                                <p class="small text-muted mb-2">Renyah di luar, gurih isian ayam di dalam.</p>
+                                <div class="mt-auto d-flex justify-content-between align-items-center">
+                                    <span class="menu-price">Rp10.000</span>
+                                    <button class="btn btn-sm btn-chili" data-menu-detail="pangsit-ayam">Detail</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6 mb-4">
+                        <div class="menu-card">
+                            <div class="menu-card-thumb">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdJDUwUYKhiNTrgN-sy_iGp5ruyPhQXY_M3Jp4sY6p4Q&s=10" alt="Pangsit Keju">
+                            </div>
+                            <div class="menu-card-body">
+                                <h4 class="h6 font-weight-bold mb-1">Pangsit Keju</h4>
+                                <p class="small text-muted mb-2">Pangsit renyah dengan lelehan keju di dalamnya.</p>
+                                <div class="mt-auto d-flex justify-content-between align-items-center">
+                                    <span class="menu-price">Rp10.000</span>
+                                    <button class="btn btn-sm btn-chili" data-menu-detail="pangsit-keju">Detail</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6 mb-4">
+                        <div class="menu-card">
+                            <div class="menu-card-thumb">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhAUD_-JzvLE6WB1GadjWx7VhgrJbNtqTm2AkwmLLy2w&s=10" alt="Tahu Bakso">
+                            </div>
+                            <div class="menu-card-body">
+                                <h4 class="h6 font-weight-bold mb-1">Tahu Bakso</h4>
+                                <p class="small text-muted mb-2">Tahu isi bakso, cocok jadi teman makan mie.</p>
+                                <div class="mt-auto d-flex justify-content-between align-items-center">
+                                    <span class="menu-price">Rp10.000</span>
+                                    <button class="btn btn-sm btn-chili" data-menu-detail="tahu-bakso">Detail</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6 mb-4">
+                        <div class="menu-card">
+                            <div class="menu-card-thumb">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT28eQqlpNDddXqo0YsWLxcT5f8UwOFmlL_3KlUUxmFQ&s=10" alt="Nugget">
+                            </div>
+                            <div class="menu-card-body">
+                                <h4 class="h6 font-weight-bold mb-1">Nugget</h4>
+                                <p class="small text-muted mb-2">Nugget crispy porsi pas untuk camilan.</p>
+                                <div class="mt-auto d-flex justify-content-between align-items-center">
+                                    <span class="menu-price">Rp15.000</span>
+                                    <button class="btn btn-sm btn-chili" data-menu-detail="nugget">Detail</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-pane" id="pane-minuman">
+                <div class="row">
+                    <div class="col-md-3 col-6 mb-4">
+                        <div class="menu-card">
+                            <div class="menu-card-thumb">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpkmsftq3PE08bgt_3dwfaj6B_Knte0NaRGtWRZaL5IA&s=10" alt="Es Kopi Susu Aren">
+                            </div>
+                            <div class="menu-card-body">
+                                <h4 class="h6 font-weight-bold mb-1">Es Kopi Susu Aren</h4>
+                                <p class="small text-muted mb-2">Perpaduan kopi, susu, dan gula aren yang pas manisnya.</p>
+                                <div class="mt-auto d-flex justify-content-between align-items-center">
+                                    <span class="menu-price">Rp12.000</span>
+                                    <button class="btn btn-sm btn-chili" data-menu-detail="kopi-aren">Detail</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6 mb-4">
+                        <div class="menu-card">
+                            <div class="menu-card-thumb">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRrvNTa3-EfbkK2gG-HGsIOXfX__SHMsLsyarC-altiQ&s=10" alt="Milkshake Strawberry">
+                            </div>
+                            <div class="menu-card-body">
+                                <h4 class="h6 font-weight-bold mb-1">Milkshake Strawberry</h4>
+                                <p class="small text-muted mb-2">Segar dan creamy, favorit anak muda.</p>
+                                <div class="mt-auto d-flex justify-content-between align-items-center">
+                                    <span class="menu-price">Rp12.000</span>
+                                    <button class="btn btn-sm btn-chili" data-menu-detail="milkshake-strawberry">Detail</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6 mb-4">
+                        <div class="menu-card">
+                            <div class="menu-card-thumb">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTREzp8b2eOR3yz8cq2Jc7mTOwGM9dWxZHdJwJLqIgfbg&s=10" alt="Milkshake Chocolate">
+                            </div>
+                            <div class="menu-card-body">
+                                <h4 class="h6 font-weight-bold mb-1">Milkshake Chocolate</h4>
+                                <p class="small text-muted mb-2">Manis legit rasa cokelat, dingin menyegarkan.</p>
+                                <div class="mt-auto d-flex justify-content-between align-items-center">
+                                    <span class="menu-price">Rp12.000</span>
+                                    <button class="btn btn-sm btn-chili" data-menu-detail="milkshake-chocolate">Detail</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6 mb-4">
+                        <div class="menu-card">
+                            <div class="menu-card-thumb">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7cSK6trXQR_Kh7PatLanJ3XOmeum7TXxo9F3lpj4UCg&s=10" alt="Es Blackcurrant">
+                            </div>
+                            <div class="menu-card-body">
+                                <h4 class="h6 font-weight-bold mb-1">Es Blackcurrant</h4>
+                                <p class="small text-muted mb-2">Minuman segar rasa blackcurrant, cocok temani mie pedas.</p>
+                                <div class="mt-auto d-flex justify-content-between align-items-center">
+                                    <span class="menu-price">Rp7.000</span>
+                                    <button class="btn btn-sm btn-chili" data-menu-detail="blackcurrant">Detail</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6 mb-4">
+                        <div class="menu-card">
+                            <div class="menu-card-thumb">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxeGMzVO_BOtgcqhBDR99UM6sqfqWYe1n0QF73UCFgiw&s=10" alt="Es Orange">
+                            </div>
+                            <div class="menu-card-body">
+                                <h4 class="h6 font-weight-bold mb-1">Es Orange</h4>
+                                <p class="small text-muted mb-2">Segar asam manis, cocok diminum dingin.</p>
+                                <div class="mt-auto d-flex justify-content-between align-items-center">
+                                    <span class="menu-price">Rp7.000</span>
+                                    <button class="btn btn-sm btn-chili" data-menu-detail="orange">Detail</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6 mb-4">
+                        <div class="menu-card">
+                            <div class="menu-card-thumb">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRe8QhPJEyEXCvChcI_o7Z02tDy-ZSh2jnkPMjzbyIopA&s=10" alt="Es Krim Durian">
+                            </div>
+                            <div class="menu-card-body">
+                                <h4 class="h6 font-weight-bold mb-1">Es Krim Durian</h4>
+                                <p class="small text-muted mb-2">Es krim durian dengan topping kacang dan keju parut.</p>
+                                <div class="mt-auto d-flex justify-content-between align-items-center">
+                                    <span class="menu-price">Rp12.000</span>
+                                    <button class="btn btn-sm btn-chili" data-menu-detail="es-durian">Detail</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- ============ TESTIMONI ============ -->
+<div id="page-testimoni" class="page-view">
+    <div class="page-header">
+        <div class="container">
+            <span class="badge badge-eyebrow mb-2">Testimoni</span>
+            <h1 class="h3 font-weight-bold mb-1">Kata Mereka Tentang MiMaMik</h1>
+            <p class="mb-0" style="color: rgba(255,255,255,.75);">Cerita dari pelanggan yang sudah mampir.</p>
+        </div>
+    </div>
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="testi-card">
+                        <div class="testi-stars mb-2">★★★★★</div>
+                        <p class="mb-3">"Tekstur mienya chewy banget dan bumbunya nendang. Level 3 pas buat yang doyan pedas tapi masih kuat makan."</p>
+                        <div class="d-flex align-items-center">
+                            <div class="testi-avatar mr-2">D</div>
+                            <div><div class="font-weight-bold small">Dinda</div><div class="text-muted small">Mahasiswi, Pekanbaru</div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="testi-card">
+                        <div class="testi-stars mb-2">★★★★★</div>
+                        <p class="mb-3">"Harganya ramah banget buat kantong anak kos, tempatnya juga adem karena full kipas dan bersih."</p>
+                        <div class="d-flex align-items-center">
+                            <div class="testi-avatar mr-2">R</div>
+                            <div><div class="font-weight-bold small">Rian</div><div class="text-muted small">Karyawan Swasta</div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="testi-card">
+                        <div class="testi-stars mb-2">★★★★☆</div>
+                        <p class="mb-3">"Sering ke sini rame-rame sama keluarga, ada musholla dan baby chair juga jadi lebih nyaman bawa anak kecil."</p>
+                        <div class="d-flex align-items-center">
+                            <div class="testi-avatar mr-2">S</div>
+                            <div><div class="font-weight-bold small">Sari</div><div class="text-muted small">Ibu Rumah Tangga</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- ============ LOKASI ============ -->
+<div id="page-lokasi" class="page-view">
+    <div class="page-header">
+        <div class="container">
+            <span class="badge badge-eyebrow mb-2">Lokasi</span>
+            <h1 class="h3 font-weight-bold mb-1">Kunjungi MiMaMik Pekanbaru</h1>
+            <p class="mb-0" style="color: rgba(255,255,255,.75);">Jalan Paus No. 69, sebelah Cahaya Car Wash.</p>
+        </div>
+    </div>
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7 mb-4 mb-lg-0">
+                    <iframe class="map-frame" loading="lazy"
+                        src="https://maps.google.com/maps?q=Jalan%20Paus%20Marpoyan%20Damai%20Pekanbaru&t=&z=15&ie=UTF8&iwloc=&output=embed">
+                    </iframe>
+                </div>
+                <div class="col-lg-5">
+                    <span class="section-eyebrow">Alamat &amp; Jam Buka</span>
+                    <h2 class="section-title font-weight-bold mb-3">Info Kunjungan</h2>
+                    <ul class="list-unstyled">
+                        <li class="mb-3"><i class="fas fa-location-dot text-chili mr-2"></i> Jl. Paus No. 69, Marpoyan Damai, Pekanbaru (sebelah Cahaya Car Wash)</li>
+                        <li class="mb-3"><i class="fas fa-clock text-chili mr-2"></i> Setiap hari, 09.00 – 21.30 WIB</li>
+                        <li class="mb-3"><i class="fas fa-square-parking text-chili mr-2"></i> Parkir motor &amp; mobil tersedia</li>
+                        <li class="mb-3"><i class="fas fa-wallet text-chili mr-2"></i> Pembayaran Cash &amp; QRIS</li>
+                    </ul>
+                    <div class="lokasi-fasilitas">
+                        <span><i class="fas fa-mosque"></i> Musholla</span>
+                        <span><i class="fas fa-fan"></i> Full Kipas</span>
+                        <span><i class="fas fa-wifi"></i> Free WiFi</span>
+                        <span><i class="fas fa-smoking"></i> Smoking Area</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- ============ KONTAK ============ -->
+<div id="page-kontak" class="page-view">
+    <div class="page-header">
+        <div class="container">
+            <span class="badge badge-eyebrow mb-2">Hubungi Kami</span>
+            <h1 class="h3 font-weight-bold mb-1">Kontak MiMaMik</h1>
+            <p class="mb-0" style="color: rgba(255,255,255,.75);">Ada pertanyaan atau mau pesan ramean? Kirim pesan di bawah ini.</p>
+        </div>
+    </div>
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 mb-4 mb-lg-0">
+                    <h2 class="section-title font-weight-bold mb-3">Info Kontak</h2>
+                    <ul class="list-unstyled mb-4">
+                        <li class="mb-3"><i class="fas fa-location-dot text-chili mr-2"></i> Jl. Paus No. 69, Marpoyan Damai, Pekanbaru</li>
+                        <li class="mb-3"><i class="fas fa-phone text-chili mr-2"></i> 0812-xxxx-xxxx (WhatsApp)</li>
+                        <li class="mb-3"><i class="fab fa-instagram text-chili mr-2"></i> @miemamik</li>
+                        <li class="mb-3"><i class="fas fa-clock text-chili mr-2"></i> Setiap hari, 09.00 – 21.30 WIB</li>
+                    </ul>
+                </div>
+                <div class="col-lg-7">
+                    <div class="contact-panel">
+                        <div class="form-success" id="formSuccess"><i class="fas fa-circle-check mr-1"></i> Pesan terkirim! Tim MiMaMik akan segera menghubungi kamu.</div>
+                        <form id="formKontak" novalidate>
+                            <div class="form-group mb-3">
+                                <label for="inputNama" class="font-weight-bold small">Nama Lengkap</label>
+                                <input type="text" class="form-control-mm" id="inputNama" placeholder="Nama kamu">
+                                <div class="field-error" id="errorNama">Nama wajib diisi (minimal 3 huruf).</div>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="inputHp" class="font-weight-bold small">No. HP / WhatsApp</label>
+                                <input type="text" class="form-control-mm" id="inputHp" placeholder="08xxxxxxxxxx">
+                                <div class="field-error" id="errorHp">Nomor HP harus 10-13 digit angka.</div>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="inputPesan" class="font-weight-bold small">Pesan</label>
+                                <textarea class="form-control-mm" id="inputPesan" rows="4" placeholder="Tulis pertanyaan atau pesanan ramean kamu..."></textarea>
+                                <div class="field-error" id="errorPesan">Pesan wajib diisi (minimal 10 huruf).</div>
+                            </div>
+                            <button type="submit" class="btn btn-chili px-4">Kirim Pesan <i class="fas fa-paper-plane ml-1"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+    <div class="container text-center">
+        <div class="mb-2">
+            <i class="fas fa-pepper-hot" style="color:var(--chili);"></i>
+            <strong class="text-white">MiMaMik Pekanbaru</strong>
+        </div>
+        <p class="mb-2">Jl. Paus No.69, Marpoyan Damai, Pekanbaru, Riau · Setiap hari 09.00–21.30 WIB</p>
+        <p class="mb-0">&copy; <span id="tahunFooter"></span> MiMaMik Pekanbaru. Sehidup, Semamik.</p>
+    </div>
+</footer>
+
+<!-- ============ MODAL DETAIL MENU ============ -->
+<div class="mm-modal-overlay" id="menuModalOverlay">
+    <div class="mm-modal">
+        <button class="mm-modal-close" id="menuModalClose" aria-label="Tutup"><i class="fas fa-xmark"></i></button>
+        <div id="menuModalContent"></div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
