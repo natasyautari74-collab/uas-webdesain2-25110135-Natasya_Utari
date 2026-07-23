@@ -18,7 +18,13 @@ body {
     color: var(--charcoal);
     background: var(--cream);
     -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
+
+.page-view.active { flex: 1 0 auto; }
+.site-footer { flex-shrink: 0; }
 
 h1, h2, h3, h4, .display-font {
     font-family: 'Baloo 2', 'Plus Jakarta Sans', sans-serif;
@@ -41,6 +47,7 @@ a:hover { text-decoration: none; }
     font-family: 'Baloo 2', sans-serif;
     font-size: 1.25rem;
     letter-spacing: .01em;
+    margin-left: 20px;
 }
 
 .nav-link-page { position: relative; font-weight: 600; }
@@ -69,20 +76,40 @@ a:hover { text-decoration: none; }
 .btn-outline-cream:hover { background: rgba(255,255,255,.12); color: #fff; }
 
 /* ---------- Hero ---------- */
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, rgb(0, 0, 0) 10%, rgba(0, 0, 0, 0.85) 55%, rgba(128, 20, 20, 0.6) 100%);
+}
 .hero-section {
     background:
+        linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
         radial-gradient(circle at 15% 20%, rgba(242,169,59,.18), transparent 45%),
         radial-gradient(circle at 85% 0%, rgba(225,68,52,.25), transparent 40%),
-        linear-gradient(160deg, var(--wine-dark), var(--wine) 60%);
+        linear-gradient(160deg, rgba(74,12,23,.88), rgba(107,18,32,.82) 60%),
+        url('img/mimamik.jpg');
+    background-size: cover;
+    background-position: center 70%;
+    background-repeat: no-repeat;
     padding: 130px 0 80px;
     position: relative;
     overflow: hidden;
 }
-
+.hero-section > .container {
+    position: relative;
+    z-index: 2;
+}
 .badge-eyebrow {
-    background: rgba(242, 169, 59, .18);
-    color: var(--amber);
-    border: 1px solid rgba(242, 169, 59, .4);
+    background: var(--wine);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, .3);
     font-weight: 700;
 }
 
@@ -247,7 +274,7 @@ a:hover { text-decoration: none; }
 }
 .menu-card:hover { transform: translateY(-4px); }
 .menu-card-thumb {
-    height: 160px; display: flex; align-items: center; justify-content: center;
+    height: 250px; display: flex; align-items: center; justify-content: center;
     background: #ffe0d8; overflow: hidden;
 }
 .menu-card-thumb img {
@@ -277,6 +304,96 @@ a:hover { text-decoration: none; }
     position: absolute; top: .8rem; right: 1rem; border: none; background: none;
     font-size: 1.3rem; color: var(--charcoal-soft); cursor: pointer;
 }
+
+
+/* ---------- Modal (custom) ---------- */
+.mm-modal-overlay {
+    position: fixed; inset: 0; background: rgba(43, 33, 31, .55);
+    display: none; align-items: center; justify-content: center; z-index: 1050; padding: 1rem;
+}
+.mm-modal-overlay.show { display: flex; }
+.mm-modal {
+    background: #fff; border-radius: var(--radius); max-width: 420px; width: 100%;
+    padding: 1.8rem; position: relative; box-shadow: var(--shadow-soft);
+    animation: fadeup .25s ease;
+}
+.mm-modal-close {
+    position: absolute; top: .8rem; right: 1rem; border: none; background: none;
+    font-size: 1.3rem; color: var(--charcoal-soft); cursor: pointer;
+}
+
+/* ---------- Topping picker & tombol WhatsApp (modal) ---------- */
+.topping-option {
+    display: flex; align-items: center; justify-content: space-between;
+    border: 1.5px solid var(--line); border-radius: 10px;
+    padding: .5rem .8rem; margin-bottom: .5rem; cursor: pointer;
+    transition: border-color .2s ease, background .2s ease;
+}
+.topping-option:hover { border-color: var(--chili); background: #fff7f5; }
+.topping-option input { accent-color: var(--chili); }
+.modal-total-row { border-top: 1px dashed var(--line); padding-top: .8rem; }
+.btn-whatsapp {
+    background: #25D366; color: #fff; border: none;
+}
+.btn-whatsapp:hover { background: #1ebc59; color: #fff; }
+.btn-outline-chili {
+    background: #fff; color: var(--chili); border: 2px solid var(--chili);
+}
+.btn-outline-chili:hover { background: #fff5f3; color: var(--chili); }
+
+.level-picker-modal { display: flex; gap: .5rem; flex-wrap: wrap; }
+.level-pill {
+    width: 40px; height: 40px; border-radius: 50%;
+    border: 2px solid var(--line); background: #fff; color: var(--wine-dark);
+    font-weight: 800; cursor: pointer; transition: all .2s ease;
+}
+.level-pill:hover { border-color: var(--chili); }
+.level-pill.active {
+    background: var(--chili); border-color: var(--chili); color: #fff;
+}
+
+/* ---------- Keranjang Pesanan ---------- */
+.btn-cart-float {
+    position: fixed; right: 22px; bottom: 22px; z-index: 1040;
+    width: 58px; height: 58px; border-radius: 50%; border: none;
+    background: var(--chili); color: #fff; font-size: 1.35rem;
+    box-shadow: 0 8px 22px rgba(225, 68, 52, .45);
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer; transition: transform .2s ease;
+}
+.btn-cart-float:hover { transform: translateY(-3px); }
+.btn-cart-float.bump { animation: cartBump .4s ease; }
+@keyframes cartBump {
+    0% { transform: scale(1); }
+    40% { transform: scale(1.25); }
+    100% { transform: scale(1); }
+}
+.cart-badge {
+    position: absolute; top: -4px; right: -4px;
+    background: var(--amber); color: var(--wine-dark);
+    font-size: .72rem; font-weight: 800; min-width: 22px; height: 22px;
+    border-radius: 999px; align-items: center; justify-content: center;
+    border: 2px solid #fff;
+}
+.keranjang-item {
+    border: 1px solid var(--line); border-radius: 12px; padding: .8rem .9rem;
+}
+.keranjang-item .keranjang-hapus {
+    border: none; background: none; color: var(--charcoal-soft);
+    cursor: pointer; font-size: .95rem; padding: .2rem;
+}
+.keranjang-item .keranjang-hapus:hover { color: var(--chili); }
+.keranjang-qty {
+    display: flex; align-items: center; gap: .8rem;
+}
+.keranjang-qty .qty-btn {
+    width: 28px; height: 28px; border-radius: 50%; border: 1.5px solid var(--line);
+    background: #fff; color: var(--wine-dark); font-weight: 800; cursor: pointer;
+    display: flex; align-items: center; justify-content: center; line-height: 1;
+}
+.keranjang-qty .qty-btn:hover { border-color: var(--chili); color: var(--chili); }
+.keranjang-qty .qty-angka { font-weight: 700; min-width: 18px; text-align: center; }
+#keranjangList { max-height: 45vh; overflow-y: auto; }
 
 /* ---------- Testimoni ---------- */
 .testi-card {
