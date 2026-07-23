@@ -433,7 +433,7 @@ a:hover { text-decoration: none; }
 /* ---------- Footer ---------- */
 .site-footer {
     background: var(--wine-dark);
-    border-top: 1px solid var(--border-soft);
+    border-top:1px solid var(--line);
     color: rgba(255,255,255,.7);
     padding: 2.5rem 0 1.5rem;
     font-size: .88rem;
