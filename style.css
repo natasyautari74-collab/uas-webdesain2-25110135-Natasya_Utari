@@ -305,23 +305,6 @@ a:hover { text-decoration: none; }
     font-size: 1.3rem; color: var(--charcoal-soft); cursor: pointer;
 }
 
-
-/* ---------- Modal (custom) ---------- */
-.mm-modal-overlay {
-    position: fixed; inset: 0; background: rgba(43, 33, 31, .55);
-    display: none; align-items: center; justify-content: center; z-index: 1050; padding: 1rem;
-}
-.mm-modal-overlay.show { display: flex; }
-.mm-modal {
-    background: #fff; border-radius: var(--radius); max-width: 420px; width: 100%;
-    padding: 1.8rem; position: relative; box-shadow: var(--shadow-soft);
-    animation: fadeup .25s ease;
-}
-.mm-modal-close {
-    position: absolute; top: .8rem; right: 1rem; border: none; background: none;
-    font-size: 1.3rem; color: var(--charcoal-soft); cursor: pointer;
-}
-
 /* ---------- Topping picker & tombol WhatsApp (modal) ---------- */
 .topping-option {
     display: flex; align-items: center; justify-content: space-between;
@@ -433,7 +416,7 @@ a:hover { text-decoration: none; }
 /* ---------- Footer ---------- */
 .site-footer {
     background: var(--wine-dark);
-    border-top:1px solid var(--line);
+    border-top: 1px solid var(--border-soft);
     color: rgba(255,255,255,.7);
     padding: 2.5rem 0 1.5rem;
     font-size: .88rem;
